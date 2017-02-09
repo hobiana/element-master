@@ -17,7 +17,7 @@ import javax.servlet.jsp.JspWriter;
  *
  * @author ITU
  */
-public class Format {
+public class Format1 {
     public static void header(JspWriter out, String title) throws IOException
     {
         out.write("\n");
@@ -26,21 +26,21 @@ public class Format {
         out.write("<!DOCTYPE html>\n");
         out.write("<html>\n");
         out.write("    <head>\n");
-        out.write("        <link rel=\"stylesheet\"  href=\"https://elementmaster.herokuapp.com/css/bootstrap.min.css\"/>\n");
-        out.write("        <link rel=\"stylesheet\"  href=\"https://elementmaster.herokuapp.com/css/styles.css\"/>\n");
+        out.write("        <link rel=\"stylesheet\"  href=\"css/bootstrap.min.css\"/>\n");
+        out.write("        <link rel=\"stylesheet\"  href=\"css/styles.css\"/>\n");
         //out.write("        <link rel=\"stylesheet\"  href=\"/MasterElements/css/iso-ang-css/style.css\"/>\n");
         //out.write("        <link rel=\"stylesheet\"  href=\"/MasterElements/css/iso-ang-css/main.css\"/>\n");
-        out.write("        <link rel=\"stylesheet\"  href=\"https://elementmaster.herokuapp.com/css/font-awesome.min.css\"/>\n");
+        out.write("        <link rel=\"stylesheet\"  href=\"css/font-awesome.min.css\"/>\n");
         out.write("        \n");
         out.write("        \n");
         out.write("\n");
         out.write("        <title>"+title+"</title>\n");
         out.write("        <meta charset=\"utf-8\" />\n");
         out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n");
-        out.write("        <script  src=\"https://elementmaster.herokuapp.com/js/jquery-3.1.0.min.js\"></script>\n");
-        out.write("        <script src=\"https://elementmaster.herokuapp.com/js/tether.min.js\"></script>\n");
-        out.write("        <script src=\"https://elementmaster.herokuapp.com/js/angular.min.js\"></script>\n");
-        out.write("        <script src=\"https://elementmaster.herokuapp.com/js/bootstrap.min.js\"></script>\n");
+        out.write("        <script  src=\"js/jquery-3.1.0.min.js\"></script>\n");
+        out.write("        <script src=\"js/tether.min.js\"></script>\n");
+        out.write("        <script src=\"js/angular.min.js\"></script>\n");
+        out.write("        <script src=\"js/bootstrap.min.js\"></script>\n");
         //out.write("        <script src=\"/MasterElements/js/myjavascript.js\"></script>\n");
         //out.write("        <script src=\"/MasterElements/js/isotope.pkgd.min.js\"></script>\n");
         
@@ -134,7 +134,7 @@ public class Format {
             try {
                 response.sendRedirect("index.jsp");
             } catch (IOException ex) {
-                Logger.getLogger(Format.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Format1.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         checkConnexion(request, response);
@@ -156,7 +156,7 @@ public class Format {
                     try {
                         response.sendRedirect("index.jsp");
                     } catch (IOException ex) {
-                        Logger.getLogger(Format.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(Format1.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
             }
@@ -169,7 +169,7 @@ public class Format {
                 response.sendRedirect("index.jsp");
                 
             } catch (IOException ex) {
-                Logger.getLogger(Format.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Format1.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }

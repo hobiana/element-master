@@ -26,7 +26,7 @@
                 <div class="card-deck text-sm-center" >
                     <div class="card elem" ng-repeat="x in motherElements track by $index">
                         <div class="exit"><a href="#" ng-click="removeMotherElement($index)"><i class="fa fa-close" aria-hidden="true"></i></a></div>
-                        <img class="card-img" src="http://localhost:8084/MasterElements/images/{{x.image}}" alt="{{x.nom}}">
+                        <img class="card-img" src="https://elementmaster.herokuapp.com/images/{{x.image}}" alt="{{x.nom}}">
                         <div class="card-block">
                           <h5 class="card-title">{{x.nom}}</h5>
                         </div>
@@ -45,7 +45,7 @@
                 
                 <div class="card-deck text-sm-center">
                     <div class="card elem" ng-repeat="x in childrenElements">
-                        <img class="card-img" src="http://localhost:8084/MasterElements/images/{{x.image}}" alt="{{x.nom}}">
+                        <img class="card-img" src="https://elementmaster.herokuapp.com/images/{{x.image}}" alt="{{x.nom}}">
                         <div class="card-block">
                           <h5 class="card-title">{{x.nom}}</h5>
                         </div>
@@ -66,7 +66,7 @@
             <div class="text-sm-center">
             <h4>Niveau {{getElement()['level']}}</h4>
             <h6><timer interval="1000" ><span id="timer">{{hhours}}:{{mminutes}}:{{sseconds}}</span></timer></h6>
-            <img class="img-circle" src="http://localhost:8084/MasterElements/images/{{getElement()['image']}}" alt="">
+            <img class="img-circle" src="https://elementmaster.herokuapp.com/images/{{getElement()['image']}}" alt="">
             <p ng-bind="getElement()['nom']"></p>
             </div>
             <hr>
@@ -91,15 +91,15 @@
     </div>
 
 </div>
-<script src="/MasterElements/js/jquery.isotope.min.js"></script>
-<script src="/MasterElements/js/angular-animate.min.js"></script>
-<script src="/MasterElements/js/angular-sanitize.min.js"></script>
-<script src="/MasterElements/js/angular-isotope.min.js"></script>
-<script src="/MasterElements/js/angular-timer.min.js"></script>
-<script src="/MasterElements/js/humanize-duration.js"></script>
-<script src="/MasterElements/js/moment.min.js"></script>
-<script src="/MasterElements/js/appdefis.js"></script>
-<script src="/MasterElements/js/angular-highlightjs.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/jquery.isotope.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/angular-animate.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/angular-sanitize.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/angular-isotope.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/angular-timer.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/humanize-duration.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/moment.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/appdefis.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/angular-highlightjs.min.js"></script>
 <%
     Format.footer(out);
 %>

@@ -15,21 +15,21 @@
 <div class="container-fluid " id="main">
     <div class="card-deck">
         <div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="http://localhost:8080/MaitreElements/images/e.jpg" alt="Card image cap">
+        <img class="card-img-top" src="https://elementmaster.herokuapp.com/images/e.jpg" alt="Card image cap">
         <div class="card-block">
             <h4 class="card-title">Mode : Libre</h4>
             <p class="card-text">Trouvez tous les éléments possibles dans un temps illimité.</p>
             <a href="#" class="btn btn-primary">Jouer !</a>
         </div>
     </div><div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="http://localhost:8080/MaitreElements/images/e.jpg" alt="Card image cap">
+        <img class="card-img-top" src="https://elementmaster.herokuapp.com/images/e.jpg" alt="Card image cap">
         <div class="card-block">
             <h4 class="card-title">Mode : Défis</h4>
             <p class="card-text">Défier les records de vos amis en les battant avec ce mode de jeu.</p>
             <a href="#" class="btn btn-primary">Jouer !</a>
         </div>
     </div><div class="card" style="width: 20rem;">
-        <img class="card-img-top" src="http://localhost:8080/MaitreElements/images/e.jpg" alt="Card image cap">
+        <img class="card-img-top" src="https://elementmaster.herokuapp.com/images/e.jpg" alt="Card image cap">
         <div class="card-block">
             <h4 class="card-title">Classement</h4>
             <p class="card-text">Regarder vos classements et même ceux de vos amis.</p>

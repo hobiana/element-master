@@ -26,7 +26,7 @@
                 <div class="card-deck text-sm-center" >
                     <div class="card elem" ng-repeat="x in motherElements track by $index">
                         <div class="exit"><a href="#" ng-click="removeMotherElement($index)"><i class="fa fa-close" aria-hidden="true"></i></a></div>
-                        <img class="card-img" src="http://localhost:8084/MasterElements/images/{{x.image}}" alt="{{x.nom}}">
+                        <img class="card-img" src="https://elementmaster.herokuapp.com/images/{{x.image}}" alt="{{x.nom}}">
                         <div class="card-block">
                           <h5 class="card-title">{{x.nom}}</h5>
                         </div>
@@ -45,7 +45,7 @@
                 
                 <div class="card-deck text-sm-center">
                     <div class="card elem" ng-repeat="x in childrenElements">
-                        <img class="card-img" src="http://localhost:8084/MasterElements/images/{{x.image}}" alt="{{x.nom}}">
+                        <img class="card-img" src="https://elementmaster.herokuapp.com/images/{{x.image}}" alt="{{x.nom}}">
                         <div class="card-block">
                           <h5 class="card-title">{{x.nom}}</h5>
                         </div>
@@ -86,12 +86,12 @@
     </div>
 
 </div>
-<script src="/MasterElements/js/jquery.isotope.min.js"></script>
-<script src="/MasterElements/js/angular-animate.min.js"></script>
-<script src="/MasterElements/js/angular-sanitize.min.js"></script>
-<script src="/MasterElements/js/angular-isotope.min.js"></script>
-<script src="/MasterElements/js/app.js"></script>
-<script src="/MasterElements/js/angular-highlightjs.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/jquery.isotope.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/angular-animate.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/angular-sanitize.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/angular-isotope.min.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/app.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/angular-highlightjs.min.js"></script>
 <%
     Format.footer(out);
 %>

@@ -25,10 +25,10 @@ demo.controller('defisCtrl', function($scope,$http) {
       $scope.motherElements = [];
       
       $scope.loadDefisMode = function(idtoken){
-          $http.get("http://localhost:8084/MasterElements/JSONRequest/getDefisJSON.jsp?idtoken="+idtoken).then(function(response) {
+          $http.get("https://elementmaster.herokuapp.com/JSONRequest/getDefisJSON.jsp?idtoken="+idtoken).then(function(response) {
                 $scope.xElement = response.data[0];
                 $scope.idtoken = idtoken;
-                $http.get("http://localhost:8084/MasterElements/JSONRequest/getElementsBasesJSON.jsp").then(function(response) {
+                $http.get("https://elementmaster.herokuapp.com/JSONRequest/getElementsBasesJSON.jsp").then(function(response) {
                     $scope.xList = response.data;
                 });
             });
@@ -90,7 +90,7 @@ demo.controller('defisCtrl', function($scope,$http) {
           
           var url = "&idelements="+idElements;
           $scope.childrenElements = [];
-          $http.get("http://localhost:8084/MasterElements/JSONRequest/getElementsFusion.jsp?idtoken="+$scope.idtoken+url).then(function(response)
+          $http.get("https://elementmaster.herokuapp.com/JSONRequest/getElementsFusion.jsp?idtoken="+$scope.idtoken+url).then(function(response)
           {
               var currdate = new Date();
                 var time = "["+ $scope.humanizeTime(currdate.getHours()) + ":" + $scope.humanizeTime(currdate.getMinutes()) +"]";
@@ -143,7 +143,7 @@ demo.controller('defisCtrl', function($scope,$http) {
           
             var url = "?idelement="+idElement;
             $scope.childrenElements = [];
-            $http.get("http://localhost:8084/MasterElements/JSONRequest/getElementsFission.jsp"+url).then(function(response)
+            $http.get("https://elementmaster.herokuapp.com/JSONRequest/getElementsFission.jsp"+url).then(function(response)
             {
                  var currdate = new Date();
                 var time = "["+ $scope.humanizeTime(currdate.getHours()) + ":" + $scope.humanizeTime(currdate.getMinutes()) +"]";
@@ -193,7 +193,7 @@ demo.controller('defisCtrl', function($scope,$http) {
       };
       $scope.monterNiveau = function()
       {
-          $http.get("http://localhost:8084/MasterElements/RemoteRequest/upgradeLevel.jsp?idtoken="+$scope.idtoken+"&time="+$scope.getScore()+"&level="+$scope.xElement.level).then(function() {
+          $http.get("https://elementmaster.herokuapp.com/RemoteRequest/upgradeLevel.jsp?idtoken="+$scope.idtoken+"&time="+$scope.getScore()+"&level="+$scope.xElement.level).then(function() {
                $scope.loadDefisMode($scope.idtoken);
                $scope.$broadcast('timer-clear');
                $scope.$broadcast('timer-start');

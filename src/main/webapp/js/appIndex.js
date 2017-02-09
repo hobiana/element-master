@@ -18,7 +18,7 @@ demo.controller('indexCtrl',function($scope,$http)
     {
         $http({
             method : "post",
-            url:"http://localhost:8084/MasterElements/RemoteRequest/checkPseudo.jsp",
+            url:"https://elementmaster.herokuapp.com/RemoteRequest/checkPseudo.jsp",
             data : "pseudo="+$scope.forms.pseudo,
             headers:{'Content-Type':'application/x-www-form-urlencoded'}
         })

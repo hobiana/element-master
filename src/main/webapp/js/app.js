@@ -20,7 +20,7 @@ demo.controller('libreCtrl', function($scope,$http) {
       $scope.motherElements = [];
       
       $scope.loadElementsDebloquer = function(idtoken){
-          $http.get("http://localhost:8084/MasterElements/JSONRequest/getElementsDebloquesJSON.jsp?idtoken="+idtoken).then(function(response) {
+          $http.get("https://elementmaster.herokuapp.com/JSONRequest/getElementsDebloquesJSON.jsp?idtoken="+idtoken).then(function(response) {
                 $scope.xList = response.data;
                 $scope.idtoken = idtoken;
             });
@@ -77,7 +77,7 @@ demo.controller('libreCtrl', function($scope,$http) {
           
           var url = "&idelements="+idElements;
           $scope.childrenElements = [];
-          $http.get("http://localhost:8084/MasterElements/JSONRequest/getElementsFusion.jsp?idtoken="+$scope.idtoken+url).then(function(response)
+          $http.get("https://elementmaster.herokuapp.com/JSONRequest/getElementsFusion.jsp?idtoken="+$scope.idtoken+url).then(function(response)
           {
               var currdate = new Date();
                 var time = "["+ $scope.humanizeTime(currdate.getHours()) + ":" + $scope.humanizeTime(currdate.getMinutes()) +"]";
@@ -123,7 +123,7 @@ demo.controller('libreCtrl', function($scope,$http) {
           
             var url = "?idelement="+idElement;
             $scope.childrenElements = [];
-            $http.get("http://localhost:8084/MasterElements/JSONRequest/getElementsFission.jsp"+url).then(function(response)
+            $http.get("https://elementmaster.herokuapp.com/JSONRequest/getElementsFission.jsp"+url).then(function(response)
             {
                  var currdate = new Date();
                 var time = "["+ $scope.humanizeTime(currdate.getHours()) + ":" + $scope.humanizeTime(currdate.getMinutes()) +"]";
@@ -172,7 +172,7 @@ demo.controller('loginCtrl',function($scope,$http)
         };
         $http({
             method : "post",
-            url:"http://localhost:8084/MasterElements/RemoteRequest/connexion.jsp",
+            url:"https://elementmaster.herokuapp.com/RemoteRequest/connexion.jsp",
             data : "mail="+$scope.data.username+"&pwd="+$scope.data.password,
             headers:{'Content-Type':'application/x-www-form-urlencoded'}
         })

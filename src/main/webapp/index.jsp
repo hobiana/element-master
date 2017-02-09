@@ -49,7 +49,7 @@
         </div>
     </div>
 </div>
-<script src="/MasterElements/js/appIndex.js"></script>
+<script src="https://elementmaster.herokuapp.com/js/appIndex.js"></script>
 <%
     Format.footer(out);
 %>
