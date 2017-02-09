@@ -75,7 +75,7 @@
             <div class="row">
                 <ul isotope-container="isotope-container">
                     
-                    <li ng-repeat="x in xList | filter : {nom:filtername}" isotope-item="isotope-item" class="kindling" ng-style="{'background-image':'url(' + '/MasterElements/images/'+ x.image + ')'}" ng-click="addElement($index)">
+                    <li ng-repeat="x in xList | filter : {nom:filtername}" isotope-item="isotope-item" class="kindling" ng-style="{'background-image':'url(' + '/images/'+ x.image + ')'}" ng-click="addElement($index)">
                         <div class="symbol">{{x.nom}}</div>
                         <div class="number" number="{{x.idelement}}">{{x.idelement}}</div>
                     </li>
