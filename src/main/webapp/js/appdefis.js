@@ -106,7 +106,7 @@ demo.controller('defisCtrl', function($scope,$http) {
                     
                     if($scope.contains($scope.childrenElements[i].idelement)===-1)
                     {
-                        $scope.historiques.push({"time":time,"histo":"Nouveau élément trouvé <b class='histo'>"+$scope.childrenElements[i].nom+"</b>."});
+                        $scope.historiques.push({"time":time,"histo":"Nouvel élément trouvé <b class='histo'>"+$scope.childrenElements[i].nom+"</b>."});
                         $scope.xList.push($scope.childrenElements[i]);
                     }
                   
