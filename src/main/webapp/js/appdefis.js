@@ -197,8 +197,6 @@ demo.controller('defisCtrl', function($scope,$http) {
       {
           $http.get("https://elementmaster.herokuapp.com/RemoteRequest/upgradeLevel.jsp?idtoken="+$scope.idtoken+"&time="+$scope.getScore()+"&level="+$scope.xElement.level).then(function() {
                $scope.loadDefisMode($scope.idtoken);
-               $scope.$broadcast('timer-clear');
-               $scope.$broadcast('timer-start');
             });
       };
 });
