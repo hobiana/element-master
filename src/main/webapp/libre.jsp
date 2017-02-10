@@ -63,7 +63,7 @@
             </div>
         </div>
         <div class="col-md-4" >
-            <h3>Elements trouvés : {{xList.length}}/2000</h3>
+            <h3>Elements trouvés : {{xList.length}}/100</h3>
             <hr>
                 <div class="form-group">
                   <input type="text" class="form-control"  ng-model="filtername" placeholder="Rechercher éléments" >
