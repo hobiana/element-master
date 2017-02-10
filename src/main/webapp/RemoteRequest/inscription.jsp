@@ -1,6 +1,6 @@
 <%-- 
-    Document   : connexion
-    Created on : 3 févr. 2017, 13:34:50
+    Document   : inscription
+    Created on : 10 févr. 2017, 12:51:03
     Author     : ITU
 --%>
 
@@ -8,17 +8,21 @@
 <%@page import="fonction.Fonction"%>
 <%
     response.addHeader("Access-Control-Allow-Origin", "*");
+    
+    String nom = request.getParameter("nom")+" "+request.getParameter("prenoms");
+    String pseudo = request.getParameter("pseudo");
     String mail = request.getParameter("mail");
-    String mdp = request.getParameter("pwd");
+    String mdp = request.getParameter("pwd"); 
+
+    
+    Fonction f = new Fonction();
     JSONObject json = new JSONObject();
-    Fonction f= new Fonction();
     try
     {
-        String token = f.authentification(mail,mdp);
-        request.getSession().setAttribute("utilisateur", token);
+        String token = f.inscription_authentification(nom,pseudo,mail, mdp);
         
         json.put("success", true);
-        json.put("token", request.getSession().getAttribute("utilisateur"));
+        json.put("token", token);
         
     }
     catch(Exception e)
@@ -28,4 +32,6 @@
     }
     out.print(json);
     
+    
+
 %>
