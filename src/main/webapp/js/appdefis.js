@@ -30,6 +30,8 @@ demo.controller('defisCtrl', function($scope,$http) {
                 $scope.idtoken = idtoken;
                 $http.get("https://elementmaster.herokuapp.com/JSONRequest/getElementsBasesJSON.jsp").then(function(response) {
                     $scope.xList = response.data;
+					$scope.$broadcast('timer-clear');
+					$scope.$broadcast('timer-start');
                 });
             });
       };

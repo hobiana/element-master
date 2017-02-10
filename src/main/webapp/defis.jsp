@@ -65,7 +65,7 @@
         <div class="col-md-4" >
             <div class="text-sm-center">
             <h4>Niveau {{getElement()['level']}}</h4>
-            <h6><timer interval="1000" ><span id="timer">{{hhours}}:{{mminutes}}:{{sseconds}}</span></timer></h6>
+            <h6><timer interval="1000" autostart="false"><span id="timer">{{hhours}}:{{mminutes}}:{{sseconds}}</span></timer></h6>
             <img class="img-circle" src="https://elementmaster.herokuapp.com/images/{{getElement()['image']}}" alt="">
             <p ng-bind="getElement()['nom']"></p>
             </div>
