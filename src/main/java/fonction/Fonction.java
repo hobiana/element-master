@@ -484,7 +484,7 @@ public class Fonction {
         String token=null;
         String idutilisateur=this.checkUtilisateur(mail, mdp, con);
         if(idutilisateur==null){
-            token="Erreur de mot de passe ou d'email.";
+            throw new Exception ("Erreur de mot de passe ou d'email.");
         }
         else token=this.insertToken(idutilisateur, con);
         
