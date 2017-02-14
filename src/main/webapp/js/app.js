@@ -104,7 +104,7 @@ demo.controller('libreCtrl', function($scope,$http) {
                 }
 		if($scope.childrenElements.length===0)
                 {
-                    var histo = "La fusion des éléments"+nomElements+" a donné"+nomfilleElements;
+                    var histo = "La fusion des éléments"+nomElements+" n'a rien donné";
                     $scope.historiques.push({"time" : time,"histo" : histo});
                 }
                 
