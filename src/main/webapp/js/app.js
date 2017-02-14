@@ -153,6 +153,11 @@ demo.controller('libreCtrl', function($scope,$http) {
                     var histo = "La fission de l'élément"+nomElement+" a donné"+nomfilleElements;
                     $scope.historiques.push({"time" : time,"histo" : histo});
                 }
+				if($scope.childrenElements.length===0)
+                {
+                    var histo = "La fission de l'élémént "+nomElement+" n'a rien donné";
+                    $scope.historiques.push({"time" : time,"histo" : histo});
+                }
                 
             });
           }
