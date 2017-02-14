@@ -102,6 +102,11 @@ demo.controller('libreCtrl', function($scope,$http) {
                     var histo = "La fusion des éléments"+nomElements+" a donné"+nomfilleElements;
                     $scope.historiques.push({"time" : time,"histo" : histo});
                 }
+		if($scope.childrenElements.length===0)
+                {
+                    var histo = "La fusion des éléments"+nomElements+" a donné"+nomfilleElements;
+                    $scope.historiques.push({"time" : time,"histo" : histo});
+                }
                 
           });
       };
